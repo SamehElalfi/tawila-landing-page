@@ -352,7 +352,7 @@ function FeatureHighlights() {
         'Sync with UberEats/DoorDash',
         'Automated dispatch',
       ],
-      image: 'https://source.unsplash.com/800x600/?mobile,food,ordering',
+      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
       imageLeft: false,
     },
     {
@@ -362,7 +362,7 @@ function FeatureHighlights() {
         'Automated supplier orders',
         'Recipe costing & menu engineering',
       ],
-      image: 'https://source.unsplash.com/800x600/?warehouse,inventory',
+      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
       imageLeft: true,
     },
     {
@@ -372,7 +372,7 @@ function FeatureHighlights() {
         'Staff performance tracking',
         'Profit/Loss reports',
       ],
-      image: 'https://source.unsplash.com/800x600/?analytics,charts',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
       imageLeft: false,
     },
   ]
@@ -519,17 +519,17 @@ function ResourcesHub() {
     {
       tag: 'Guide',
       title: 'How to Optimize Your Menu for Profit',
-      image: 'https://source.unsplash.com/400x300/?menu,restaurant',
+      image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
     },
     {
       tag: 'Article',
       title: '10 Ways to Reduce Food Waste in Your Kitchen',
-      image: 'https://source.unsplash.com/400x300/?kitchen,chef',
+      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop',
     },
     {
       tag: 'Case Study',
       title: 'How Bella Italia Increased Revenue by 40%',
-      image: 'https://source.unsplash.com/400x300/?restaurant,dining',
+      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop',
     },
   ]
 
