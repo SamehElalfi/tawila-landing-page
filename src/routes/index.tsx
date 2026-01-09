@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {
   Menu,
   X,
@@ -76,9 +76,20 @@ function StickyNavigation({
   setMobileMenuOpen: (open: boolean) => void
 }) {
   const navLinks = ['Products', 'Solutions', 'Resources', 'Pricing']
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-sm">
+    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+    }`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -132,7 +143,7 @@ function StickyNavigation({
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray-200 md:hidden">
+        <div className="border-t border-gray-200 bg-white md:hidden">
           <div className="space-y-1 px-4 py-3">
             {navLinks.map((link) => (
               <a
@@ -165,7 +176,7 @@ function StickyNavigation({
  */
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-gray-50 via-purple-50/30 to-gray-50">
+    <section className="relative overflow-hidden bg-linear-to-br from-gray-50 via-purple-50/30 to-gray-50 pt-16">
       {/* Background Image with Fade Effect */}
       <div className="absolute inset-y-0 right-0 w-1/2">
         <img
