@@ -147,6 +147,6 @@ Create a professional Footer section using Tailwind CSS.
 * Col 4 (Newsletter): Header "Subscribe to our newsletter". An input field and a "Subscribe" button.
 
 
-* **Bottom Bar:** Copyright text ("© 2024 RestaurantOS") and links for "Privacy Policy" and "Terms of Service".
+* **Bottom Bar:** Copyright text ("© 2024 Tawila") and links for "Privacy Policy" and "Terms of Service".
 * **Style:** Dark background (`bg-gray-900`) with light gray text (`text-gray-400`).
 

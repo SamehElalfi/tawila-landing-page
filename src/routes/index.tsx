@@ -18,7 +18,7 @@ import {
 } from 'lucide-react'
 
 export const Route = createFileRoute('/')({
-  component: RestaurantOSLandingPage,
+  component: TawilaLandingPage,
 })
 
 /**
@@ -26,7 +26,7 @@ export const Route = createFileRoute('/')({
  * A complete, responsive landing page for a Restaurant SaaS platform
  * Built with Tailwind CSS and Lucide icons
  */
-function RestaurantOSLandingPage() {
+function TawilaLandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -84,7 +84,7 @@ function StickyNavigation({
           {/* Logo */}
           <div className="shrink-0">
             <a href="#" className="text-2xl font-bold text-[#5a23b1]">
-              RestaurantOS
+              Tawila
             </a>
           </div>
 
@@ -606,7 +606,7 @@ function Footer() {
           {/* Column 1: Logo and About */}
           <div>
             <h3 className="mb-4 text-2xl font-bold text-white">
-              RestaurantOS
+              Tawila
             </h3>
             <p className="mb-4 text-sm">
               The complete operating system for modern restaurants. Streamline
@@ -723,7 +723,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
-            <p>© 2024 RestaurantOS. All rights reserved.</p>
+            <p>© 2024 Tawila. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white">
                 Privacy Policy
