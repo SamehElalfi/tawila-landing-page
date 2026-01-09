@@ -166,7 +166,17 @@ function StickyNavigation({
 function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-linear-to-br from-gray-50 via-purple-50/30 to-gray-50">
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
+      {/* Background Image with Fade Effect */}
+      <div className="absolute inset-y-0 right-0 w-1/2">
+        <img
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200&h=800&fit=crop"
+          alt="Restaurant Background"
+          className="h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-linear-to-l from-transparent via-gray-50/60 to-gray-50"></div>
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Content */}
           <div className="flex flex-col justify-center">
@@ -202,17 +212,8 @@ function HeroSection() {
             </div>
           </div>
 
-          {/* Right Content - Dashboard Mockup */}
-          <div className="relative flex items-center justify-center">
-            <div className="relative">
-              <div className="absolute -inset-4 rounded-2xl bg-linear-to-r from-purple-400 to-pink-400 opacity-20 blur-2xl"></div>
-              <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop"
-                alt="Tawila Dashboard"
-                className="relative rounded-2xl shadow-2xl"
-              />
-            </div>
-          </div>
+          {/* Right Content - Spacer for background image */}
+          <div className="relative hidden lg:block"></div>
         </div>
       </div>
     </section>
