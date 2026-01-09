@@ -207,7 +207,7 @@ function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-4 rounded-2xl bg-linear-to-r from-purple-400 to-pink-400 opacity-20 blur-2xl"></div>
               <img
-                src="https://source.unsplash.com/800x600/?dashboard,analytics,software"
+                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=600&fit=crop"
                 alt="Tawila Dashboard"
                 className="relative rounded-2xl shadow-2xl"
               />
