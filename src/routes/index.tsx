@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import {
   Menu,
   X,
@@ -190,12 +191,22 @@ function HeroSection() {
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Content */}
-          <div className="flex flex-col justify-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            className="flex flex-col justify-center"
+          >
             {/* Badge */}
-            <div className="mb-6 inline-flex items-center gap-2 self-start rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-[#5a23b1]">
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-6 inline-flex items-center gap-2 self-start rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-[#5a23b1]"
+            >
               <Sparkles className="h-4 w-4" />
               New: AI Inventory Management
-            </div>
+            </motion.div>
 
             {/* H1 Headline */}
             <h1 className="mb-6 text-5xl font-bold leading-tight text-gray-900 lg:text-6xl">
@@ -221,7 +232,7 @@ function HeroSection() {
                 View Demo Video
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Content - Spacer for background image */}
           <div className="relative hidden lg:block"></div>
@@ -247,21 +258,31 @@ function TrustBar() {
   return (
     <section className="border-b border-gray-200 bg-white py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="mb-8 text-center text-sm font-semibold uppercase tracking-wider text-gray-500">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 text-center text-sm font-semibold uppercase tracking-wider text-gray-500"
+        >
           Trusted by Leading Brands
-        </p>
+        </motion.p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
           {brands.map((brand, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="flex h-16 w-32 items-center justify-center grayscale transition-all duration-300 hover:grayscale-0"
             >
               <img
                 src={brand}
                 alt={`Brand ${index + 1}`}
-                className="h-full w-full object-contain"
+                className="h-full w-full object-contain rounded-2xl overflow-hidden"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -280,14 +301,14 @@ function ValueProposition() {
       title: 'Commission-Free Ordering',
       description:
         'Keep 100% of your revenue with our direct ordering platform. No hidden fees, no commissions.',
-      color: 'bg-blue-100 text-blue-600',
+      color: 'bg-purple-100 text-purple-600',
     },
     {
       icon: Package,
       title: 'Real-Time Inventory',
       description:
         'Track stock levels automatically, reduce waste, and never run out of key ingredients.',
-      color: 'bg-green-100 text-green-600',
+      color: 'bg-purple-100 text-purple-600',
     },
     {
       icon: BarChart3,
@@ -302,7 +323,13 @@ function ValueProposition() {
     <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
+        >
           <h2 className="mb-4 text-4xl font-bold text-gray-900">
             Everything you need to run a modern restaurant
           </h2>
@@ -310,15 +337,19 @@ function ValueProposition() {
             From ordering to inventory management, analytics to staff
             scheduling—we've got you covered.
           </p>
-        </div>
+        </motion.div>
 
         {/* Grid */}
         <div className="grid gap-8 md:grid-cols-3">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const IconComponent = feature.icon
             return (
-              <div
+              <motion.div
                 key={feature.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="rounded-lg border border-gray-100 p-8 transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <div
@@ -330,7 +361,7 @@ function ValueProposition() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </div>
+              </motion.div>
             )
           })}
         </div>
@@ -381,9 +412,13 @@ function FeatureHighlights() {
     <section className="bg-gray-50 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="space-y-24">
-          {features.map((feature) => (
-            <div
+          {features.map((feature, index) => (
+            <motion.div
               key={feature.title}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
               className={`grid items-center gap-12 lg:grid-cols-2 ${
                 feature.imageLeft ? 'lg:grid-flow-dense' : ''
               }`}
@@ -411,7 +446,7 @@ function FeatureHighlights() {
                   className="rounded-2xl shadow-2xl"
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -453,17 +488,27 @@ function Testimonials() {
     <section className="bg-slate-50 py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
+        >
           <h2 className="mb-4 text-4xl font-bold text-gray-900">
             Loved by restaurant owners
           </h2>
-        </div>
+        </motion.div>
 
         {/* Testimonial Grid */}
         <div className="grid gap-8 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
-            <div
+          {testimonials.map((testimonial, index) => (
+            <motion.div
               key={testimonial.name}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               className="rounded-lg bg-white p-8 shadow-sm"
             >
               {/* Star Rating */}
@@ -502,7 +547,7 @@ function Testimonials() {
                   {testimonial.metric}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -537,7 +582,13 @@ function ResourcesHub() {
     <section className="bg-white py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-16 text-center"
+        >
           <h2 className="mb-4 text-4xl font-bold text-gray-900">
             Latest Resources
           </h2>
@@ -545,13 +596,17 @@ function ResourcesHub() {
             Learn from industry experts and discover best practices for running
             a successful restaurant.
           </p>
-        </div>
+        </motion.div>
 
         {/* Resource Grid */}
         <div className="grid gap-8 md:grid-cols-3">
-          {resources.map((resource) => (
-            <div
+          {resources.map((resource, index) => (
+            <motion.div
               key={resource.title}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
               className="overflow-hidden rounded-lg border border-gray-200 transition-shadow hover:shadow-lg"
             >
               {/* Cover Image */}
@@ -577,7 +632,7 @@ function ResourcesHub() {
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -592,7 +647,13 @@ function ResourcesHub() {
 function CTABanner() {
   return (
     <section className="bg-linear-to-r from-[#5a23b1] to-[#7c3aed] py-20">
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8"
+      >
         <h2 className="mb-4 text-4xl font-bold text-white lg:text-5xl">
           Ready to grow your restaurant empire?
         </h2>
@@ -607,7 +668,7 @@ function CTABanner() {
             Talk to Sales
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }
@@ -744,7 +805,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="mt-12 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
-            <p>© 2024 Tawila. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Tawila. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-white">
                 Privacy Policy
