@@ -118,7 +118,7 @@ function StickyNavigation({
 
           {/* Desktop Action Buttons */}
           <div className="hidden items-center space-x-4 md:flex">
-            <button className="rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
+            <button className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
               Log In
             </button>
             <button className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
