@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -95,25 +95,25 @@ function StickyNavigation({
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="shrink-0">
-            <a href="#" className="flex items-center">
+            <Link to="/" className="flex items-center">
               <img
                 src="https://www.tawila.co.uk/_next/image?url=%2Ftawila.png&w=3840&q=75"
                 alt="Tawila"
                 className="h-8 w-auto"
               />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation Links (Centered) */}
           <div className="hidden items-center space-x-8 md:flex">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                to={`/${link.toLowerCase()}`}
                 className="text-gray-700 transition-colors hover:text-[#5a23b1] hover:underline"
               >
                 {link}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -147,14 +147,14 @@ function StickyNavigation({
         <div className="border-t border-gray-200 bg-white md:hidden">
           <div className="space-y-1 px-4 py-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link}
-                href={`#${link.toLowerCase()}`}
+                to={`/${link.toLowerCase()}`}
                 className="block rounded-md px-3 py-2 text-gray-700 hover:bg-gray-50"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link}
-              </a>
+              </Link>
             ))}
             <div className="space-y-2 pt-4">
               <button className="w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-[#5a23b1]">
@@ -734,11 +734,6 @@ function Footer() {
               <li>
                 <a href="#" className="hover:text-white">
                   Ordering
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white">
-                  Inventory
                 </a>
               </li>
               <li>
