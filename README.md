@@ -1,4 +1,15 @@
-Welcome to your new TanStack app! 
+# Tawila Landing Page
+
+A high-conversion landing page for Tawila - a food ordering and dine-in system that helps restaurants keep 100% of their earnings with no commission fees.
+
+## Features
+
+- 🚀 Zero commission on orders
+- 📱 Custom branded website & mobile app (iOS & Android)
+- 🍽️ QR code dine-in system
+- 💯 Keep 100% of your earnings
+- ⚡ Fast 48-hour setup
+- 🎨 Fully responsive design with Tailwind CSS
 
 # Getting Started
 
