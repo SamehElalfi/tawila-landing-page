@@ -49,9 +49,6 @@ function RestaurantOSLandingPage() {
       {/* Feature Highlights (Zig-Zag Layout) */}
       <FeatureHighlights />
 
-      {/* Integrations Showcase */}
-      <IntegrationsShowcase />
-
       {/* Success Stories / Testimonials */}
       <Testimonials />
 
@@ -397,65 +394,6 @@ function FeatureHighlights() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-/**
- * Integrations Showcase Component
- * Displays integration logos grouped by category
- */
-function IntegrationsShowcase() {
-  const integrations = {
-    POS: ['Square', 'Clover', 'Toast', 'Lightspeed'],
-    Delivery: ['UberEats', 'DoorDash', 'Glovo', 'Deliveroo'],
-    Accounting: ['Xero', 'QuickBooks', 'FreshBooks', 'Sage'],
-  }
-
-  return (
-    <section className="bg-white py-20 lg:py-24">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-gray-900">
-            Works with the tools you already use
-          </h2>
-        </div>
-
-        {/* Integration Categories */}
-        <div className="space-y-12">
-          {Object.entries(integrations).map(([category, items]) => (
-            <div key={category}>
-              <h3 className="mb-6 text-center text-sm font-semibold uppercase tracking-wider text-gray-500">
-                {category}
-              </h3>
-              <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
-                {items.map((item) => (
-                  <div
-                    key={item}
-                    className="flex h-24 items-center justify-center rounded-lg border border-gray-200 bg-white p-4 transition-shadow hover:shadow-md"
-                  >
-                    <span className="text-lg font-semibold text-gray-700">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="mt-12 text-center">
-          <a
-            href="#integrations"
-            className="inline-flex items-center gap-2 text-lg font-medium text-[#5a23b1] hover:underline"
-          >
-            See all 100+ integrations
-            <ArrowRight className="h-5 w-5" />
-          </a>
         </div>
       </div>
     </section>
