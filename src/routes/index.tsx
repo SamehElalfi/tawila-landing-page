@@ -83,8 +83,12 @@ function StickyNavigation({
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="shrink-0">
-            <a href="#" className="text-2xl font-bold text-[#5a23b1]">
-              Tawila
+            <a href="#" className="flex items-center">
+              <img
+                src="https://www.tawila.co.uk/_next/image?url=%2Ftawila.png&w=3840&q=75"
+                alt="Tawila"
+                className="h-8 w-auto"
+              />
             </a>
           </div>
 
@@ -204,7 +208,7 @@ function HeroSection() {
               <div className="absolute -inset-4 rounded-2xl bg-linear-to-r from-purple-400 to-pink-400 opacity-20 blur-2xl"></div>
               <img
                 src="https://source.unsplash.com/800x600/?dashboard,analytics,software"
-                alt="Restaurant OS Dashboard"
+                alt="Tawila Dashboard"
                 className="relative rounded-2xl shadow-2xl"
               />
             </div>
@@ -221,12 +225,11 @@ function HeroSection() {
  */
 function TrustBar() {
   const brands = [
-    'Brand A',
-    'Brand B',
-    'Brand C',
-    'Brand D',
-    'Brand E',
-    'Brand F',
+    'https://tawila-vault.s3.eu-north-1.amazonaws.com/01962ebb-4b46-78f6-b5e2-e554b512463e.avif',
+    'https://imagedelivery.net/om7lG0lN91mifFHl_A941A/123d4f69-772e-40b6-e414-a4e5e05b7900/public',
+    'https://toctive-medisync.s3.me-central-1.amazonaws.com/menu-items/01957109-dd42-7022-a36a-fd1ced0b7bb8..avif',
+    'https://tawila-vault.s3.eu-north-1.amazonaws.com/01976b0d-5eb4-75fb-be6a-69b7758bb6b1.jpeg',
+    'https://tawila-vault.s3.eu-north-1.amazonaws.com/01984d88-7e79-7cda-a976-d2e58aa31356.png',
   ]
 
   return (
@@ -236,12 +239,16 @@ function TrustBar() {
           Trusted by Leading Brands
         </p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          {brands.map((brand) => (
+          {brands.map((brand, index) => (
             <div
-              key={brand}
-              className="flex h-12 w-32 items-center justify-center grayscale transition-all duration-300 hover:grayscale-0"
+              key={index}
+              className="flex h-16 w-32 items-center justify-center grayscale transition-all duration-300 hover:grayscale-0"
             >
-              <span className="text-xl font-bold text-gray-400">{brand}</span>
+              <img
+                src={brand}
+                alt={`Brand ${index + 1}`}
+                className="h-full w-full object-contain"
+              />
             </div>
           ))}
         </div>
@@ -605,9 +612,11 @@ function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo and About */}
           <div>
-            <h3 className="mb-4 text-2xl font-bold text-white">
-              Tawila
-            </h3>
+            <img
+              src="https://www.tawila.co.uk/_next/image?url=%2Ftawila.png&w=3840&q=75"
+              alt="Tawila"
+              className="mb-4 h-8 w-auto"
+            />
             <p className="mb-4 text-sm">
               The complete operating system for modern restaurants. Streamline
               operations and boost profitability.
