@@ -2,6 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
 import { Check, X } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
 
 export const Route = createFileRoute('/pricing')({ component: PricingPage })
 
@@ -177,6 +178,7 @@ function PricingPage() {
           </motion.div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

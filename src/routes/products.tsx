@@ -1,7 +1,8 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { motion } from 'framer-motion'
-import { ShoppingBag, Package, Clock, Smartphone } from 'lucide-react'
+import { ShoppingBag, Clock, Smartphone } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
+import { Footer } from '../components/Footer'
 
 export const Route = createFileRoute('/products')({ component: ProductsPage })
 
@@ -84,6 +85,7 @@ function ProductsPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }
