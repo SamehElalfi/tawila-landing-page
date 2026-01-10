@@ -79,9 +79,9 @@ export function Footer() {
             <h4 className="mb-4 font-semibold text-white">Company</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-white">
+                <Link to="/about" className="hover:text-white">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white">
@@ -89,9 +89,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <Link to="/contact" className="hover:text-white">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="hover:text-white">
