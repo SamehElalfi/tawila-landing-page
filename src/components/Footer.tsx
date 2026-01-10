@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router'
 import { Twitter, Linkedin, Instagram, Facebook } from 'lucide-react'
 
 export function Footer() {
@@ -125,12 +126,12 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
             <p>© {new Date().getFullYear()} Tawila. All rights reserved.</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white">
+              <Link to="/privacy" className="hover:text-white">
                 Privacy Policy
-              </a>
-              <a href="#" className="hover:text-white">
+              </Link>
+              <Link to="/terms" className="hover:text-white">
                 Terms of Service
-              </a>
+              </Link>
             </div>
           </div>
         </div>
