@@ -656,8 +656,8 @@ function Testimonials() {
               </div>
 
               {/* Metric Highlight */}
-              <div className="rounded-lg bg-green-50 px-4 py-2 text-center">
-                <p className="font-bold text-green-700">
+              <div className="rounded-lg bg-purple-50 px-4 py-2 text-center">
+                <p className="font-bold text-purple-700">
                   {testimonial.metric}
                 </p>
               </div>
