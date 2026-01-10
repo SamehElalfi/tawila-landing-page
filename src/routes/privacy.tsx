@@ -18,7 +18,7 @@ function PrivacyPolicyPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-50 to-white py-20">
+      <section className="bg-linear-to-br from-purple-50 to-white pt-30">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
