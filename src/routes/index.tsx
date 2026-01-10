@@ -370,79 +370,195 @@ function ValueProposition() {
 
 /**
  * Feature Highlights Component
- * Alternating zig-zag layout showcasing detailed features
+ * Advanced interactive feature showcase with animations and statistics
  */
 function FeatureHighlights() {
   const features = [
     {
       title: 'Direct Ordering & Delivery',
+      description: 'Take control of your online presence with a commission-free ordering system that puts you first.',
       bullets: [
-        'Commission-free mobile app',
-        'Sync with UberEats/DoorDash',
-        'Automated dispatch',
+        'Zero commission fees - keep 100% of your revenue',
+        'Native iOS & Android apps with your branding',
+        'Real-time order tracking and notifications',
+        'Integrated with major delivery platforms',
+      ],
+      stats: [
+        { value: '0%', label: 'Commission' },
+        { value: '2x', label: 'More Orders' },
+        { value: '48h', label: 'Setup Time' },
       ],
       image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
       imageLeft: false,
+      gradient: 'from-purple-600 to-purple-400',
+      icon: ShoppingBag,
     },
     {
       title: 'Smart Inventory & Food Costing',
+      description: 'Eliminate waste and maximize profits with intelligent inventory management powered by real-time data.',
       bullets: [
-        'Track stock in real-time',
-        'Automated supplier orders',
-        'Recipe costing & menu engineering',
+        'Automated stock tracking with low-stock alerts',
+        'AI-powered demand forecasting',
+        'Recipe costing with real-time profit margins',
+        'Direct supplier integration for seamless reordering',
+      ],
+      stats: [
+        { value: '30%', label: 'Less Waste' },
+        { value: '25%', label: 'Cost Savings' },
+        { value: '100+', label: 'Suppliers' },
       ],
       image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
       imageLeft: true,
+      gradient: 'from-purple-500 to-violet-500',
+      icon: Package,
     },
     {
       title: 'Actionable Insights',
+      description: 'Make data-driven decisions with comprehensive analytics that reveal opportunities for growth.',
       bullets: [
-        'Sales dashboards',
-        'Staff performance tracking',
-        'Profit/Loss reports',
+        'Real-time sales dashboards with custom metrics',
+        'Customer behavior analysis and segmentation',
+        'Staff performance tracking and optimization',
+        'Automated profit/loss reports and forecasting',
+      ],
+      stats: [
+        { value: '360°', label: 'View' },
+        { value: 'Live', label: 'Updates' },
+        { value: '50+', label: 'Metrics' },
       ],
       image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
       imageLeft: false,
+      gradient: 'from-purple-700 to-indigo-600',
+      icon: BarChart3,
     },
   ]
 
   return (
-    <section className="bg-gray-50 py-24">
+    <section className="bg-gradient-to-b from-white to-gray-50 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="space-y-24">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mb-20 text-center"
+        >
+          <h2 className="mb-4 text-4xl font-bold text-gray-900 md:text-5xl">
+            Powerful Features Built for Success
+          </h2>
+          <p className="mx-auto max-w-2xl text-xl text-gray-600">
+            Everything you need to run a modern restaurant, all in one integrated platform
+          </p>
+        </motion.div>
+
+        <div className="space-y-32">
           {features.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
               transition={{ duration: 0.8 }}
-              className={`grid items-center gap-12 lg:grid-cols-2 ${
-                feature.imageLeft ? 'lg:grid-flow-dense' : ''
-              }`}
+              className="relative"
             >
-              {/* Text Content */}
-              <div className={feature.imageLeft ? 'lg:col-start-2' : ''}>
-                <h3 className="mb-6 text-3xl font-bold text-gray-900">
-                  {feature.title}
-                </h3>
-                <ul className="space-y-4">
-                  {feature.bullets.map((bullet) => (
-                    <li key={bullet} className="flex items-start gap-3">
-                      <Check className="mt-1 h-5 w-5 shrink-0 text-[#5a23b1]" />
-                      <span className="text-lg text-gray-600">{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <div
+                className={`grid items-center gap-12 lg:grid-cols-2 ${
+                  feature.imageLeft ? 'lg:grid-flow-dense' : ''
+                }`}
+              >
+                {/* Text Content */}
+                <div className={feature.imageLeft ? 'lg:col-start-2' : ''}>
+                  {/* Icon Badge */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
+                    className={`mb-6 inline-flex items-center justify-center rounded-2xl bg-gradient-to-br ${feature.gradient} p-4 shadow-lg`}
+                  >
+                    <feature.icon className="h-8 w-8 text-white" />
+                  </motion.div>
 
-              {/* Image */}
-              <div className={feature.imageLeft ? 'lg:col-start-1' : ''}>
-                <img
-                  src={feature.image}
-                  alt={feature.title}
-                  className="rounded-2xl shadow-2xl"
-                />
+                  <h3 className="mb-4 text-4xl font-bold text-gray-900">
+                    {feature.title}
+                  </h3>
+                  <p className="mb-8 text-lg text-gray-600">
+                    {feature.description}
+                  </p>
+
+                  {/* Feature Bullets */}
+                  <ul className="mb-8 space-y-4">
+                    {feature.bullets.map((bullet, bulletIndex) => (
+                      <motion.li
+                        key={bullet}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1 * bulletIndex }}
+                        className="flex items-start gap-3"
+                      >
+                        <div className={`mt-1 rounded-full bg-gradient-to-br ${feature.gradient} p-1`}>
+                          <Check className="h-4 w-4 text-white" />
+                        </div>
+                        <span className="text-lg text-gray-700">{bullet}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+
+                  {/* Stats */}
+                  <div className="grid grid-cols-3 gap-6">
+                    {feature.stats.map((stat, statIndex) => (
+                      <motion.div
+                        key={stat.label}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 + statIndex * 0.1 }}
+                        className="text-center"
+                      >
+                        <div className={`mb-1 bg-gradient-to-r ${feature.gradient} bg-clip-text text-3xl font-bold text-transparent`}>
+                          {stat.value}
+                        </div>
+                        <div className="text-sm text-gray-600">{stat.label}</div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Image with Overlay */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className={`relative ${feature.imageLeft ? 'lg:col-start-1' : ''}`}
+                >
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className="h-full w-full object-cover"
+                    />
+                    {/* Gradient Overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-20`}></div>
+                  </div>
+                  {/* Floating Card Accent */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.5 }}
+                    className={`absolute -bottom-6 -right-6 rounded-xl bg-white p-6 shadow-xl ${
+                      feature.imageLeft ? 'lg:-left-6 lg:right-auto' : ''
+                    }`}
+                  >
+                    <div className={`bg-gradient-to-r ${feature.gradient} bg-clip-text text-2xl font-bold text-transparent`}>
+                      {feature.stats[0].value}
+                    </div>
+                    <div className="text-sm text-gray-600">{feature.stats[0].label}</div>
+                  </motion.div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
