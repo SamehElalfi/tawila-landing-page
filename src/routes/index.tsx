@@ -26,6 +26,10 @@ export const Route = createFileRoute('/')({
  * Built with Tailwind CSS and Lucide icons
  */
 function TawilaLandingPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (

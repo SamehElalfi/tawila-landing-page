@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Check, X } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
@@ -7,6 +8,10 @@ import { Footer } from '../components/Footer'
 export const Route = createFileRoute('/pricing')({ component: PricingPage })
 
 function PricingPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const plans = [
     {
       name: 'Starter',

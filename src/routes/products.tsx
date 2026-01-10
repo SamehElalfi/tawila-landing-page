@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ShoppingBag, Clock, Smartphone } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
@@ -7,6 +8,10 @@ import { Footer } from '../components/Footer'
 export const Route = createFileRoute('/products')({ component: ProductsPage })
 
 function ProductsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const products = [
     {
       icon: ShoppingBag,

@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Utensils, Coffee, Pizza, Building2 } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
@@ -7,6 +8,10 @@ import { Footer } from '../components/Footer'
 export const Route = createFileRoute('/solutions')({ component: SolutionsPage })
 
 function SolutionsPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   const solutions = [
     {
       icon: Utensils,
