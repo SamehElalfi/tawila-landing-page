@@ -84,11 +84,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
-                  Careers
-                </a>
-              </li>
-              <li>
                 <Link to="/contact" className="hover:text-white">
                   Contact
                 </Link>
