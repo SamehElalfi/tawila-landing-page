@@ -152,3 +152,76 @@ code {
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom Range Slider Styles */
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 9999px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.range-slider:hover {
+  opacity: 1;
+}
+
+/* Webkit (Chrome, Safari, Edge) */
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #5a23b1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(90, 35, 177, 0.3);
+  transition: all 0.2s ease;
+  border: 3px solid white;
+}
+
+.range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(90, 35, 177, 0.5);
+}
+
+.range-slider::-webkit-slider-thumb:active {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(90, 35, 177, 0.6);
+}
+
+/* Firefox */
+.range-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #5a23b1;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(90, 35, 177, 0.3);
+  transition: all 0.2s ease;
+  border: 3px solid white;
+}
+
+.range-slider::-moz-range-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(90, 35, 177, 0.5);
+}
+
+.range-slider::-moz-range-thumb:active {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(90, 35, 177, 0.6);
+}
+
+/* Firefox track */
+.range-slider::-moz-range-track {
+  height: 8px;
+  border-radius: 9999px;
+}
+
+.range-slider::-moz-range-progress {
+  background: #5a23b1;
+  height: 8px;
+  border-radius: 9999px;
+}
