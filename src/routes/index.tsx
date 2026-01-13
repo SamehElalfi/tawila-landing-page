@@ -124,12 +124,12 @@ function StickyNavigation({
 
           {/* Desktop Action Buttons */}
           <div className="hidden items-center space-x-4 md:flex">
-            <button className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
+            <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
               Log In
-            </button>
-            <button className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
+            </a>
+            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
               Book a Demo
-            </button>
+            </a>
           </div>
 
           {/* Mobile Hamburger Menu Icon */}
@@ -162,12 +162,12 @@ function StickyNavigation({
               </Link>
             ))}
             <div className="space-y-2 pt-4">
-              <button className="w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-[#5a23b1]">
+              <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-center text-[#5a23b1]">
                 Log In
-              </button>
-              <button className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-white">
+              </a>
+              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-center text-white">
                 Book a Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -210,7 +210,7 @@ function HeroSection() {
               className="mb-6 inline-flex items-center gap-2 self-start rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-[#5a23b1]"
             >
               <Sparkles className="h-4 w-4" />
-              New: AI Inventory Management
+              New: AI for Restaurant Insights
             </motion.div>
 
             {/* H1 Headline */}
@@ -482,9 +482,9 @@ function SavingsCalculator() {
 
                 {/* CTA */}
                 <div className="pt-4">
-                  <button className="w-full rounded-lg bg-white px-6 py-4 text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105">
+                  <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg bg-white px-6 py-4 text-center text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105">
                     Start Saving Today
-                  </button>
+                  </a>
                   <p className="mt-3 text-center text-sm text-purple-100">
                     No credit card required • Free setup
                   </p>
@@ -1007,12 +1007,12 @@ function CTABanner() {
           Join 3,000+ restaurateurs today. No credit card required.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <button className="w-full rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105 sm:w-auto">
+          <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="w-full rounded-lg bg-white px-8 py-4 text-center text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105 sm:w-auto">
             Get a Demo
-          </button>
-          <button className="w-full rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-white hover:text-[#5a23b1] sm:w-auto">
+          </a>
+          <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="w-full rounded-lg border-2 border-white px-8 py-4 text-center text-lg font-semibold text-white transition-all hover:bg-white hover:text-[#5a23b1] sm:w-auto">
             Talk to Sales
-          </button>
+          </a>
         </div>
       </motion.div>
     </section>

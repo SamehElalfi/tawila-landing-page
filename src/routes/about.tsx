@@ -246,9 +246,9 @@ function AboutPage() {
               Let's work together to make your restaurant more successful
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="rounded-lg bg-[#5a23b1] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#4a1d91]">
+              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#4a1d91]">
                 Book a Demo
-              </button>
+              </a>
               <a
                 href="/contact"
                 className="rounded-lg border-2 border-[#5a23b1] px-8 py-3 font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50"

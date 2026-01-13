@@ -56,12 +56,12 @@ export function Navbar({ transparent = false }: NavbarProps) {
 
           {/* Desktop Action Buttons */}
           <div className="hidden items-center space-x-4 md:flex">
-            <button className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
+            <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
               Log In
-            </button>
-            <button className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
+            </a>
+            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
               Book a Demo
-            </button>
+            </a>
           </div>
 
           {/* Mobile Hamburger Menu Icon */}
@@ -94,12 +94,12 @@ export function Navbar({ transparent = false }: NavbarProps) {
               </Link>
             ))}
             <div className="space-y-2 pt-4">
-              <button className="w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-[#5a23b1]">
+              <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-center text-[#5a23b1]">
                 Log In
-              </button>
-              <button className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-white">
+              </a>
+              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-center text-white">
                 Book a Demo
-              </button>
+              </a>
             </div>
           </div>
         </div>

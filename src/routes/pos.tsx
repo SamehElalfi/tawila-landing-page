@@ -78,9 +78,9 @@ function POSPage() {
               A modern POS system designed for restaurants. Fast, reliable, and packed
               with features to help you serve customers better and run operations smoothly.
             </p>
-            <button className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50">
+            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50">
               Request a Demo
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -256,14 +256,14 @@ function POSPage() {
               See how Tawila POS can transform your restaurant operations
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#4a1d91]">
+              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#4a1d91]">
                 Schedule Demo
-              </button>
+              </a>
               <a
                 href="/contact"
                 className="rounded-lg border-2 border-[#5a23b1] px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50"
               >
-                Get Pricing
+                Get Custom Pricing
               </a>
             </div>
           </motion.div>

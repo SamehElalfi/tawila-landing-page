@@ -78,9 +78,9 @@ function OrderingPage() {
               Take control of your online orders with a commission-free ordering system.
               Build direct relationships with your customers and keep 100% of your revenue.
             </p>
-            <button className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50">
+            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50">
               Start Your Free Trial
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -203,9 +203,9 @@ function OrderingPage() {
               Start accepting direct orders today and keep 100% of your revenue
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#4a1d91]">
+              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#4a1d91]">
                 Get Started Free
-              </button>
+              </a>
               <a
                 href="/contact"
                 className="rounded-lg border-2 border-[#5a23b1] px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50"

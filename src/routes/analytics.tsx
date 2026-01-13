@@ -78,9 +78,9 @@ function AnalyticsPage() {
               Make data-driven decisions with powerful analytics that reveal opportunities
               for growth. See what's working and what's not in real-time.
             </p>
-            <button className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50">
+            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50">
               See Analytics in Action
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
@@ -253,9 +253,9 @@ function AnalyticsPage() {
               Get the insights you need to grow your restaurant business
             </p>
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <button className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#4a1d91]">
+              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-[#4a1d91]">
                 View Demo
-              </button>
+              </a>
               <a
                 href="/contact"
                 className="rounded-lg border-2 border-[#5a23b1] px-8 py-4 text-lg font-semibold text-[#5a23b1] transition-colors hover:bg-purple-50"
