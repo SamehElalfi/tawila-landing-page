@@ -1,19 +1,18 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
+  ArrowRight,
+  BarChart3,
+  Check,
   Menu,
-  X,
-  Sparkles,
+  Package,
   PlayCircle,
   ShoppingBag,
-  BarChart3,
-  Package,
+  Sparkles,
   Star,
-  ArrowRight,
-  Check,
+  X,
 } from 'lucide-react'
-import { Navbar } from '../components/Navbar'
+import { useEffect, useState } from 'react'
 import { Footer } from '../components/Footer'
 
 export const Route = createFileRoute('/')({
@@ -93,9 +92,11 @@ function StickyNavigation({
   }, [])
 
   return (
-    <nav className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
-    }`}>
+    <nav
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+      }`}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
@@ -124,10 +125,20 @@ function StickyNavigation({
 
           {/* Desktop Action Buttons */}
           <div className="hidden items-center space-x-4 md:flex">
-            <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
+            <a
+              href="https://control.tawila.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white"
+            >
               Log In
             </a>
-            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
+            <a
+              href="https://calendly.com/ahmedabdulalgane/tawila-ltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]"
+            >
               Book a Demo
             </a>
           </div>
@@ -162,10 +173,20 @@ function StickyNavigation({
               </Link>
             ))}
             <div className="space-y-2 pt-4">
-              <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-center text-[#5a23b1]">
+              <a
+                href="https://control.tawila.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-center text-[#5a23b1]"
+              >
                 Log In
               </a>
-              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-center text-white">
+              <a
+                href="https://calendly.com/ahmedabdulalgane/tawila-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-center text-white"
+              >
                 Book a Demo
               </a>
             </div>
@@ -269,7 +290,10 @@ function HeroSection() {
             >
               <X className="h-8 w-8" />
             </button>
-            <div className="relative overflow-hidden rounded-lg bg-black" style={{ paddingBottom: '56.25%' }}>
+            <div
+              className="relative overflow-hidden rounded-lg bg-black"
+              style={{ paddingBottom: '56.25%' }}
+            >
               <iframe
                 className="absolute inset-0 h-full w-full"
                 src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
@@ -342,7 +366,8 @@ function SavingsCalculator() {
   const [averageOrderValue, setAverageOrderValue] = useState(20)
   const [commissionRate, setCommissionRate] = useState(20)
 
-  const monthlySavings = (ordersPerMonth * averageOrderValue * commissionRate) / 100
+  const monthlySavings =
+    (ordersPerMonth * averageOrderValue * commissionRate) / 100
   const annualSavings = monthlySavings * 12
 
   return (
@@ -387,10 +412,14 @@ function SavingsCalculator() {
                     <input
                       type="number"
                       value={ordersPerMonth}
-                      onChange={(e) => setOrdersPerMonth(Number(e.target.value))}
+                      onChange={(e) =>
+                        setOrdersPerMonth(Number(e.target.value))
+                      }
                       className="w-20 rounded-lg border border-gray-300 px-3 py-1.5 text-right text-sm font-semibold text-gray-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
-                    <span className="text-sm font-medium text-gray-500">orders</span>
+                    <span className="text-sm font-medium text-gray-500">
+                      orders
+                    </span>
                   </div>
                 </div>
                 <div className="relative pt-1">
@@ -403,7 +432,7 @@ function SavingsCalculator() {
                     onChange={(e) => setOrdersPerMonth(Number(e.target.value))}
                     className="range-slider"
                     style={{
-                      background: `linear-gradient(to right, #5a23b1 0%, #5a23b1 ${((ordersPerMonth - 50) / (1000 - 50)) * 100}%, #e5e7eb ${((ordersPerMonth - 50) / (1000 - 50)) * 100}%, #e5e7eb 100%)`
+                      background: `linear-gradient(to right, #5a23b1 0%, #5a23b1 ${((ordersPerMonth - 50) / (1000 - 50)) * 100}%, #e5e7eb ${((ordersPerMonth - 50) / (1000 - 50)) * 100}%, #e5e7eb 100%)`,
                     }}
                   />
                   <div className="mt-2 flex justify-between text-xs text-gray-400">
@@ -424,10 +453,14 @@ function SavingsCalculator() {
                     <input
                       type="number"
                       value={averageOrderValue}
-                      onChange={(e) => setAverageOrderValue(Number(e.target.value))}
+                      onChange={(e) =>
+                        setAverageOrderValue(Number(e.target.value))
+                      }
                       className="w-20 rounded-lg border border-gray-300 px-3 py-1.5 text-right text-sm font-semibold text-gray-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
-                    <span className="text-sm font-medium text-gray-500">per order</span>
+                    <span className="text-sm font-medium text-gray-500">
+                      per order
+                    </span>
                   </div>
                 </div>
                 <div className="relative pt-1">
@@ -437,10 +470,12 @@ function SavingsCalculator() {
                     max="100"
                     step="1"
                     value={averageOrderValue}
-                    onChange={(e) => setAverageOrderValue(Number(e.target.value))}
+                    onChange={(e) =>
+                      setAverageOrderValue(Number(e.target.value))
+                    }
                     className="range-slider"
                     style={{
-                      background: `linear-gradient(to right, #5a23b1 0%, #5a23b1 ${((averageOrderValue - 5) / (100 - 5)) * 100}%, #e5e7eb ${((averageOrderValue - 5) / (100 - 5)) * 100}%, #e5e7eb 100%)`
+                      background: `linear-gradient(to right, #5a23b1 0%, #5a23b1 ${((averageOrderValue - 5) / (100 - 5)) * 100}%, #e5e7eb ${((averageOrderValue - 5) / (100 - 5)) * 100}%, #e5e7eb 100%)`,
                     }}
                   />
                   <div className="mt-2 flex justify-between text-xs text-gray-400">
@@ -460,7 +495,9 @@ function SavingsCalculator() {
                     <input
                       type="number"
                       value={commissionRate}
-                      onChange={(e) => setCommissionRate(Number(e.target.value))}
+                      onChange={(e) =>
+                        setCommissionRate(Number(e.target.value))
+                      }
                       className="w-20 rounded-lg border border-gray-300 px-3 py-1.5 text-right text-sm font-semibold text-gray-900 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-200"
                     />
                     <span className="text-sm font-medium text-gray-500">%</span>
@@ -476,7 +513,7 @@ function SavingsCalculator() {
                     onChange={(e) => setCommissionRate(Number(e.target.value))}
                     className="range-slider"
                     style={{
-                      background: `linear-gradient(to right, #5a23b1 0%, #5a23b1 ${((commissionRate - 10) / (35 - 10)) * 100}%, #e5e7eb ${((commissionRate - 10) / (35 - 10)) * 100}%, #e5e7eb 100%)`
+                      background: `linear-gradient(to right, #5a23b1 0%, #5a23b1 ${((commissionRate - 10) / (35 - 10)) * 100}%, #e5e7eb ${((commissionRate - 10) / (35 - 10)) * 100}%, #e5e7eb 100%)`,
                     }}
                   />
                   <div className="mt-2 flex justify-between text-xs text-gray-400">
@@ -506,7 +543,10 @@ function SavingsCalculator() {
                 <div className="rounded-xl bg-white/20 p-6">
                   <p className="mb-2 text-sm text-purple-100">Saved Monthly</p>
                   <p className="text-4xl font-bold text-white">
-                    £{monthlySavings.toLocaleString('en-GB', { maximumFractionDigits: 0 })}
+                    £
+                    {monthlySavings.toLocaleString('en-GB', {
+                      maximumFractionDigits: 0,
+                    })}
                   </p>
                 </div>
 
@@ -514,13 +554,21 @@ function SavingsCalculator() {
                 <div className="rounded-xl bg-white p-6">
                   <p className="mb-2 text-sm text-gray-600">Saved Annually</p>
                   <p className="text-5xl font-bold text-[#5a23b1]">
-                    £{annualSavings.toLocaleString('en-GB', { maximumFractionDigits: 0 })}
+                    £
+                    {annualSavings.toLocaleString('en-GB', {
+                      maximumFractionDigits: 0,
+                    })}
                   </p>
                 </div>
 
                 {/* CTA */}
                 <div className="pt-4">
-                  <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg bg-white px-6 py-4 text-center text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105">
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfFbO3qsAFcuD0pApU3Vlth8L_ZnvJnEiIdl4U_wEyd_7p-iQ/viewform?usp=preview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full rounded-lg bg-white px-6 py-4 text-center text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105"
+                  >
                     Start Saving Today
                   </a>
                   <p className="mt-3 text-center text-sm text-purple-100">
@@ -646,7 +694,8 @@ function FeatureHighlights() {
   const features = [
     {
       title: 'Direct Ordering & Delivery',
-      description: 'Take control of your online presence with a commission-free ordering system that puts you first.',
+      description:
+        'Take control of your online presence with a commission-free ordering system that puts you first.',
       bullets: [
         'Zero commission fees - keep 100% of your revenue',
         'Native iOS & Android apps with your branding',
@@ -658,14 +707,16 @@ function FeatureHighlights() {
         { value: '2x', label: 'More Orders' },
         { value: '48h', label: 'Setup Time' },
       ],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
       imageLeft: false,
       gradient: 'from-purple-600 to-purple-400',
       icon: ShoppingBag,
     },
     {
       title: 'Smart Inventory & Food Costing',
-      description: 'Eliminate waste and maximize profits with intelligent inventory management powered by real-time data.',
+      description:
+        'Eliminate waste and maximize profits with intelligent inventory management powered by real-time data.',
       bullets: [
         'Automated stock tracking with low-stock alerts',
         'AI-powered demand forecasting',
@@ -677,14 +728,16 @@ function FeatureHighlights() {
         { value: '25%', label: 'Cost Savings' },
         { value: '100+', label: 'Suppliers' },
       ],
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
       imageLeft: true,
       gradient: 'from-purple-500 to-violet-500',
       icon: Package,
     },
     {
       title: 'Actionable Insights',
-      description: 'Make data-driven decisions with comprehensive analytics that reveal opportunities for growth.',
+      description:
+        'Make data-driven decisions with comprehensive analytics that reveal opportunities for growth.',
       bullets: [
         'Real-time sales dashboards with custom metrics',
         'Customer behavior analysis and segmentation',
@@ -696,7 +749,8 @@ function FeatureHighlights() {
         { value: 'Live', label: 'Updates' },
         { value: '50+', label: 'Metrics' },
       ],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
       imageLeft: false,
       gradient: 'from-purple-700 to-indigo-600',
       icon: BarChart3,
@@ -718,7 +772,8 @@ function FeatureHighlights() {
             Powerful Features Built for Success
           </h2>
           <p className="mx-auto max-w-2xl text-xl text-gray-600">
-            Everything you need to run a modern restaurant, all in one integrated platform
+            Everything you need to run a modern restaurant, all in one
+            integrated platform
           </p>
         </motion.div>
 
@@ -768,7 +823,9 @@ function FeatureHighlights() {
                         transition={{ delay: 0.1 * bulletIndex }}
                         className="flex items-start gap-3"
                       >
-                        <div className={`mt-1 rounded-full bg-gradient-to-br ${feature.gradient} p-1`}>
+                        <div
+                          className={`mt-1 rounded-full bg-gradient-to-br ${feature.gradient} p-1`}
+                        >
                           <Check className="h-4 w-4 text-white" />
                         </div>
                         <span className="text-lg text-gray-700">{bullet}</span>
@@ -787,10 +844,14 @@ function FeatureHighlights() {
                         transition={{ delay: 0.3 + statIndex * 0.1 }}
                         className="text-center"
                       >
-                        <div className={`mb-1 bg-gradient-to-r ${feature.gradient} bg-clip-text text-3xl font-bold text-transparent`}>
+                        <div
+                          className={`mb-1 bg-gradient-to-r ${feature.gradient} bg-clip-text text-3xl font-bold text-transparent`}
+                        >
                           {stat.value}
                         </div>
-                        <div className="text-sm text-gray-600">{stat.label}</div>
+                        <div className="text-sm text-gray-600">
+                          {stat.label}
+                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -811,7 +872,9 @@ function FeatureHighlights() {
                       className="h-full w-full object-cover"
                     />
                     {/* Gradient Overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-20`}></div>
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-20`}
+                    ></div>
                   </div>
                   {/* Floating Card Accent */}
                   <motion.div
@@ -823,10 +886,14 @@ function FeatureHighlights() {
                       feature.imageLeft ? 'lg:-left-6 lg:right-auto' : ''
                     }`}
                   >
-                    <div className={`bg-gradient-to-r ${feature.gradient} bg-clip-text text-2xl font-bold text-transparent`}>
+                    <div
+                      className={`bg-gradient-to-r ${feature.gradient} bg-clip-text text-2xl font-bold text-transparent`}
+                    >
                       {feature.stats[0].value}
                     </div>
-                    <div className="text-sm text-gray-600">{feature.stats[0].label}</div>
+                    <div className="text-sm text-gray-600">
+                      {feature.stats[0].label}
+                    </div>
                   </motion.div>
                 </motion.div>
               </div>
@@ -948,17 +1015,20 @@ function ResourcesHub() {
     {
       tag: 'Guide',
       title: 'How to Optimize Your Menu for Profit',
-      image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
     },
     {
       tag: 'Article',
       title: '10 Ways to Reduce Food Waste in Your Kitchen',
-      image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop',
     },
     {
       tag: 'Case Study',
       title: 'How Bella Italia Increased Revenue by 40%',
-      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop',
+      image:
+        'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop',
     },
   ]
 
@@ -1045,10 +1115,20 @@ function CTABanner() {
           Join 3,000+ restaurateurs today. No credit card required.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="w-full rounded-lg bg-white px-8 py-4 text-center text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105 sm:w-auto">
+          <a
+            href="https://calendly.com/ahmedabdulalgane/tawila-ltd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-lg bg-white px-8 py-4 text-center text-lg font-semibold text-[#5a23b1] shadow-lg transition-transform hover:scale-105 sm:w-auto"
+          >
             Get a Demo
           </a>
-          <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="w-full rounded-lg border-2 border-white px-8 py-4 text-center text-lg font-semibold text-white transition-all hover:bg-white hover:text-[#5a23b1] sm:w-auto">
+          <a
+            href="https://calendly.com/ahmedabdulalgane/tawila-ltd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full rounded-lg border-2 border-white px-8 py-4 text-center text-lg font-semibold text-white transition-all hover:bg-white hover:text-[#5a23b1] sm:w-auto"
+          >
             Talk to Sales
           </a>
         </div>
