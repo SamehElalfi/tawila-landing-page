@@ -42,14 +42,14 @@ function AboutPage() {
       name: 'Ahmed Mohammed',
       role: 'Co-Founder & COO',
       bio: 'Ex-dish-washer, Ex-food-deliverer',
-      image: 'https://media.licdn.com/dms/image/v2/C4E03AQEr5LIkejyb-Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1655157555816?e=1765411200&v=beta&t=byyghW8fFjskl07xOO3wWpjENIrWBCfdkzROtyM6WRI',
+      image: '/ahmed-mohammed.jpeg',
       linkedin: 'https://www.linkedin.com/in/ahmed-mohamed-193005242/',
     },
     {
       name: 'Ahmed Elsir',
       role: 'Co-Founder & CTO',
       bio: 'Ex-Chef, Ex-food-deliverer',
-      image: 'https://media.licdn.com/dms/image/v2/D4E03AQHVJOoi5RW-9g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1709401064127?e=1765411200&v=beta&t=N_70QJCmNsCOHZz9xomIrGEKjh4YkDUYNe6CecNOPVM',
+      image: '/ahmed-elsir.jpeg',
       linkedin: 'https://www.linkedin.com/in/aelsir/',
     },
   ]
@@ -172,11 +172,17 @@ function AboutPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="mx-auto mb-6 h-48 w-48 rounded-full object-cover shadow-xl"
-                />
+                <div className="group relative mx-auto mb-6 h-64 w-64">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-30" />
+                  <div className="relative h-full w-full overflow-hidden rounded-full ring-4 ring-purple-100 transition-all duration-500 group-hover:ring-8 group-hover:ring-purple-200">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  </div>
+                </div>
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">{member.name}</h3>
                 <p className="mb-2 text-lg font-semibold text-[#5a23b1]">{member.role}</p>
                 <p className="mb-4 text-gray-600">{member.bio}</p>
@@ -184,7 +190,7 @@ function AboutPage() {
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#5a23b1] hover:text-[#4a1d91]"
+                  className="inline-flex items-center gap-2 text-[#5a23b1] transition-all hover:gap-3 hover:text-[#4a1d91]"
                 >
                   <Linkedin className="h-5 w-5" />
                   Connect on LinkedIn
