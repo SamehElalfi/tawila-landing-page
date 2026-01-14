@@ -250,9 +250,9 @@ function HeroSection() {
 
               {/* CTA Area */}
               <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-                <button className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-[#4a1d91] hover:shadow-xl">
+                <Link to="/pricing" className="rounded-lg bg-[#5a23b1] px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all hover:bg-[#4a1d91] hover:shadow-xl">
                   Get Started Free
-                </button>
+                </Link>
                 <button
                   onClick={() => setIsVideoOpen(true)}
                   className="flex items-center gap-2 text-lg font-medium text-gray-700 transition-colors hover:text-[#5a23b1]"
