@@ -150,15 +150,18 @@ function PricingPage() {
                   ))}
                 </ul>
 
-                <button
-                  className={`w-full rounded-lg px-6 py-3 font-semibold transition-all ${
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSfFbO3qsAFcuD0pApU3Vlth8L_ZnvJnEiIdl4U_wEyd_7p-iQ/viewform?usp=preview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full rounded-lg px-6 py-3 text-center font-semibold transition-all ${
                     plan.popular
                       ? 'bg-white text-[#5a23b1] hover:bg-gray-100'
                       : 'bg-[#5a23b1] text-white hover:bg-[#4a1d91]'
                   }`}
                 >
                   Get Started
-                </button>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -177,9 +180,14 @@ function PricingPage() {
             <p className="mb-8 text-lg text-gray-600">
               Contact our sales team for custom enterprise solutions
             </p>
-            <button className="rounded-lg bg-[#5a23b1] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#4a1d91]">
+            <a
+              href="/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block rounded-lg bg-[#5a23b1] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#4a1d91]"
+            >
               Contact Sales
-            </button>
+            </a>
           </motion.div>
         </div>
       </section>
