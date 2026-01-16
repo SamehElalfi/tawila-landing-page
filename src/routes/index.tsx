@@ -748,7 +748,7 @@ function FeatureHighlights() {
         { value: 'Easy', label: 'Reports' },
       ],
       image:
-        '/public/tawila-control.png',
+        '/tawila-control.png',
       imageLeft: false,
       gradient: 'from-purple-700 to-indigo-600',
       icon: BarChart3,
