@@ -53,7 +53,7 @@ function POSPage() {
     'Split bills and group payments',
     'Integrated payment processing',
     'Kitchen display system (KDS) sync',
-    'Real-time inventory updates',
+    'Menu management and modifications',
     'Customer loyalty program',
     'Detailed sales reporting',
   ]
@@ -220,8 +220,8 @@ function POSPage() {
                 description: 'Sales data syncs in real-time with your analytics dashboard.',
               },
               {
-                title: 'Inventory',
-                description: 'Stock levels update automatically with every sale.',
+                title: 'Back-Office',
+                description: 'Seamlessly integrated with your complete back-office system.',
               },
             ].map((integration, index) => (
               <motion.div

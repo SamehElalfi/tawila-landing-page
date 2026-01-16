@@ -55,10 +55,10 @@ function TawilaLandingPage() {
       <FeatureHighlights />
 
       {/* Success Stories / Testimonials */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       {/* Resources / Content Hub */}
-      <ResourcesHub />
+      {/* <ResourcesHub /> */}
 
       {/* Bottom CTA Banner */}
       <CTABanner />
@@ -80,7 +80,7 @@ function StickyNavigation({
   mobileMenuOpen: boolean
   setMobileMenuOpen: (open: boolean) => void
 }) {
-  const navLinks = ['Products', 'Solutions', 'Resources', 'Pricing']
+  const navLinks = ['Products', 'Solutions', 'Pricing']
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
@@ -244,8 +244,7 @@ function HeroSection() {
 
               {/* Subheadline */}
               <p className="mb-8 text-xl text-gray-600">
-                Streamline orders, cut food waste, and boost profits with one
-                platform. Trusted by 10,000+ venues.
+                Complete technology solution with 0% commission fees. From your first 100 orders to sustainable growth.
               </p>
 
               {/* CTA Area */}
@@ -614,23 +613,23 @@ function ValueProposition() {
   const features = [
     {
       icon: ShoppingBag,
-      title: 'Commission-Free Ordering',
+      title: '0% Commission Ordering',
       description:
-        'Keep 100% of your revenue with our direct ordering platform. No hidden fees, no commissions.',
+        'Keep 100% of your revenue with our direct ordering platform. Web, iOS, and Android apps with your branding.',
       color: 'bg-purple-100 text-purple-600',
     },
     {
       icon: Package,
-      title: 'Real-Time Inventory',
+      title: 'Complete POS System',
       description:
-        'Track stock levels automatically, reduce waste, and never run out of key ingredients.',
+        'Modern cashier and back-office system designed specifically for restaurant owners. Easy to use, powerful features.',
       color: 'bg-purple-100 text-purple-600',
     },
     {
       icon: BarChart3,
-      title: 'Unified Analytics',
+      title: 'Reporting & Analytics',
       description:
-        'All your data in one place. Make informed decisions with powerful insights and reports.',
+        'All your sales data and performance metrics in one place. Make informed decisions to grow your business.',
       color: 'bg-purple-100 text-purple-600',
     },
   ]
@@ -650,8 +649,7 @@ function ValueProposition() {
             Everything you need to run a modern restaurant
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-gray-600">
-            From ordering to inventory management, analytics to staff
-            scheduling—we've got you covered.
+            From commission-free ordering to POS systems and analytics—we've got you covered.
           </p>
         </motion.div>
 
@@ -693,18 +691,18 @@ function ValueProposition() {
 function FeatureHighlights() {
   const features = [
     {
-      title: 'Direct Ordering & Delivery',
+      title: 'Commission-Free Ordering',
       description:
-        'Take control of your online presence with a commission-free ordering system that puts you first.',
+        'Take control of your online presence with a complete ordering system that keeps 100% of your revenue.',
       bullets: [
-        'Zero commission fees - keep 100% of your revenue',
-        'Native iOS & Android apps with your branding',
+        'Zero commission fees - keep every penny',
+        'Branded website, iOS & Android mobile apps',
         'Real-time order tracking and notifications',
-        'Integrated with major delivery platforms',
+        'Custom promotions and notifications',
       ],
       stats: [
         { value: '0%', label: 'Commission' },
-        { value: '2x', label: 'More Orders' },
+        { value: '100%', label: 'Your Revenue' },
         { value: '48h', label: 'Setup Time' },
       ],
       image:
@@ -714,43 +712,43 @@ function FeatureHighlights() {
       icon: ShoppingBag,
     },
     {
-      title: 'Smart Inventory & Food Costing',
+      title: 'Modern POS System',
       description:
-        'Eliminate waste and maximize profits with intelligent inventory management powered by real-time data.',
+        'Complete point-of-sale and back-office system designed to be easy and intuitive for restaurant owners.',
       bullets: [
-        'Automated stock tracking with low-stock alerts',
-        'AI-powered demand forecasting',
-        'Recipe costing with real-time profit margins',
-        'Direct supplier integration for seamless reordering',
+        'Fast order processing and payment handling',
+        'Menu management and modifications',
+        'Dine-in and pick-up system integration',
+        'Works seamlessly with ordering platform',
       ],
       stats: [
-        { value: '30%', label: 'Less Waste' },
-        { value: '25%', label: 'Cost Savings' },
-        { value: '100+', label: 'Suppliers' },
+        { value: '3x', label: 'Faster' },
+        { value: 'Easy', label: 'To Use' },
+        { value: '24/7', label: 'Support' },
       ],
       image:
-        'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
+        'https://images.unsplash.com/photo-1556742111-a301076d9d18?w=800&h=600&fit=crop',
       imageLeft: true,
       gradient: 'from-purple-500 to-violet-500',
       icon: Package,
     },
     {
-      title: 'Actionable Insights',
+      title: 'Reporting & Analytics',
       description:
-        'Make data-driven decisions with comprehensive analytics that reveal opportunities for growth.',
+        'Comprehensive reporting and analytics to help you understand your business and make informed decisions.',
       bullets: [
-        'Real-time sales dashboards with custom metrics',
-        'Customer behavior analysis and segmentation',
-        'Staff performance tracking and optimization',
-        'Automated profit/loss reports and forecasting',
+        'Real-time sales dashboards and reports',
+        'Customer ordering patterns and insights',
+        'Revenue and performance tracking',
+        'Fully integrated with all systems',
       ],
       stats: [
-        { value: '360°', label: 'View' },
         { value: 'Live', label: 'Updates' },
-        { value: '50+', label: 'Metrics' },
+        { value: 'All Data', label: 'In One Place' },
+        { value: 'Easy', label: 'Reports' },
       ],
       image:
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop',
+        '/public/tawila-control.png',
       imageLeft: false,
       gradient: 'from-purple-700 to-indigo-600',
       icon: BarChart3,
@@ -912,26 +910,26 @@ function FeatureHighlights() {
 function Testimonials() {
   const testimonials = [
     {
-      quote: 'This platform saved us 15 hours a week on admin.',
-      name: 'Sarah Johnson',
-      restaurant: 'The Green Bistro',
+      quote: 'Tawila completely transformed our business. No more pen and paper, everything is digital and organized.',
+      name: 'Alostora',
+      restaurant: 'Restaurant Owner',
       avatar: 'https://i.pravatar.cc/150?img=1',
-      metric: '⬇ 12% Food Cost',
+      metric: '⬆ 2x Revenue Every 3 Months',
     },
     {
       quote:
-        'Our online orders tripled in the first month. Best investment ever.',
-      name: 'Michael Chen',
-      restaurant: 'Dragon Wok',
+        'Finally, a system built for people like us. Easy to use and no commission fees eating into our profits.',
+      name: 'Restaurant Owner',
+      restaurant: 'Ethnic Cuisine',
       avatar: 'https://i.pravatar.cc/150?img=2',
-      metric: '⬆ 200% Online Orders',
+      metric: '0% Commission Fees',
     },
     {
-      quote: 'The analytics helped us identify our most profitable dishes.',
-      name: 'Emma Rodriguez',
-      restaurant: 'La Cocina',
+      quote: 'The support team truly understands our challenges. They listen and help us grow.',
+      name: 'Small Business Owner',
+      restaurant: 'Family Restaurant',
       avatar: 'https://i.pravatar.cc/150?img=3',
-      metric: '⬆ 28% Profit Margin',
+      metric: '£1,500+ Saved',
     },
   ]
 
@@ -1014,19 +1012,19 @@ function ResourcesHub() {
   const resources = [
     {
       tag: 'Guide',
-      title: 'How to Optimize Your Menu for Profit',
+      title: 'How to Get Your First 100 Orders',
       image:
         'https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop',
     },
     {
       tag: 'Article',
-      title: '10 Ways to Reduce Food Waste in Your Kitchen',
+      title: 'Marketing Your Restaurant in 2026',
       image:
         'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&h=300&fit=crop',
     },
     {
       tag: 'Case Study',
-      title: 'How Bella Italia Increased Revenue by 40%',
+      title: 'How Alostora Achieved 2x Growth with Tawila',
       image:
         'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop',
     },
@@ -1109,10 +1107,10 @@ function CTABanner() {
         className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8"
       >
         <h2 className="mb-4 text-4xl font-bold text-white lg:text-5xl">
-          Ready to grow your restaurant empire?
+          Ready to keep 100% of your revenue?
         </h2>
         <p className="mb-8 text-xl text-purple-100">
-          Join 3,000+ restaurateurs today. No credit card required.
+          Join restaurant owners who chose 0% commission. No credit card required.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a

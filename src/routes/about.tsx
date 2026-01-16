@@ -88,23 +88,27 @@ function AboutPage() {
             <h2 className="mb-8 text-3xl font-bold text-gray-900">Our Story</h2>
             <div className="space-y-6 text-lg text-gray-600">
               <p>
-                Tawila was born from firsthand experience in the restaurant industry. Our founders,
-                Ahmed Mohammed and Ahmed Elsir, have worked as chefs, dishwashers, and food deliverers.
-                They experienced the challenges restaurant owners face every day: high commission fees,
-                complicated systems, and lack of support.
+                We are Sudanese. We both ran businesses back in Sudan. Starting over in a new country, 
+                we experienced firsthand the challenges of navigating unfamiliar systems.
               </p>
               <p>
-                We saw how third-party delivery apps were taking 12-30% of hard-earned revenue, making
+                We watched our friends—brilliant chefs who had also fled conflict—struggle with the same 
+                barriers. They could create incredible food, but they faced unfamiliar systems and technology 
+                companies failed to meet their needs.
+              </p>
+              <p>
+                We saw how third-party delivery apps were taking 15-35% of hard-earned revenue, making
                 it nearly impossible for small restaurants to thrive. We knew there had to be a better way.
               </p>
               <p>
-                In 2024, we decided to build that better way. Tawila is a complete operating system
-                designed specifically for restaurants - with zero commission fees, transparent pricing,
-                and support from people who truly understand the industry.
+                And that's why we started Tawila in 2024. Tawila means "Restaurant's Table" in Arabic, 
+                a metaphor for togetherness. We provide a complete operating system designed specifically 
+                for immigrant restaurant owners—with zero commission fees, transparent pricing, and support 
+                from people who truly understand the journey.
               </p>
               <p>
-                Today, we're proud to serve over 10,000 venues, helping them keep 100% of their revenue
-                and grow their businesses on their own terms.
+                Our goal is simple: Help restaurant owners from day zero, from getting their first 100 
+                orders to scaling sustainably.
               </p>
             </div>
           </motion.div>
@@ -218,9 +222,9 @@ function AboutPage() {
 
           <div className="grid gap-8 md:grid-cols-4">
             {[
-              { value: '10,000+', label: 'Venues Served' },
+              { value: '7+', label: 'Active Restaurants' },
               { value: '0%', label: 'Commission Fees' },
-              { value: '£5M+', label: 'Saved Annually' },
+              { value: '£1,500+', label: 'Saved by Customers' },
               { value: '48h', label: 'Average Setup' },
             ].map((stat, index) => (
               <motion.div

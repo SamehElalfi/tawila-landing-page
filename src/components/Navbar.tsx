@@ -10,7 +10,7 @@ export function Navbar({ transparent = false }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
-  const navLinks = ['Products', 'Solutions', 'Resources', 'Pricing']
+  const navLinks = ['Products', 'Solutions', 'Pricing']
 
   useEffect(() => {
     const handleScroll = () => {

@@ -22,8 +22,8 @@ function AnalyticsPage() {
     },
     {
       icon: TrendingUp,
-      title: 'Sales Forecasting',
-      description: 'AI-powered predictions help you plan inventory and staffing.',
+      title: 'Sales Tracking',
+      description: 'Track your revenue and sales performance across all channels.',
     },
     {
       icon: PieChart,
@@ -210,15 +210,15 @@ function AnalyticsPage() {
             {[
               {
                 title: 'Optimize Menu',
-                description: 'Identify your most and least profitable items to make menu decisions that boost margins.',
+                description: 'Identify your most and least popular items to make menu decisions that drive sales.',
               },
               {
-                title: 'Reduce Waste',
-                description: 'Track inventory trends to minimize food waste and optimize ordering quantities.',
+                title: 'Track Performance',
+                description: 'Monitor sales trends and peak times to optimize staffing and operations.',
               },
               {
-                title: 'Improve Marketing',
-                description: 'Understand which campaigns drive results and allocate your marketing budget effectively.',
+                title: 'Understand Customers',
+                description: 'Learn what your customers love to order and create targeted promotions.',
               },
             ].map((useCase, index) => (
               <motion.div
