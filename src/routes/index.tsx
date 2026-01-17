@@ -103,7 +103,7 @@ function StickyNavigation({
           <div className="shrink-0">
             <Link to="/" className="flex items-center">
               <img
-                src="https://www.tawila.co.uk/_next/image?url=%2Ftawila.png&w=3840&q=75"
+                src="/tawila.png"
                 alt="Tawila"
                 className="h-8 w-auto"
               />
