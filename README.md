@@ -2,7 +2,7 @@
 
 A modern, high-performance landing page for Tawila - a commission-free restaurant management platform that helps restaurants keep 100% of their earnings.
 
-## 🚀 Features
+## Features
 
 - **Zero Commission**: Keep 100% of your revenue
 - **Custom Branding**: Branded website & mobile apps (iOS & Android)
@@ -12,7 +12,7 @@ A modern, high-performance landing page for Tawila - a commission-free restauran
 - **Fully Responsive**: Beautiful design across all devices
 - **Fast Setup**: Get started in 48 hours
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework**: React 19 with TypeScript
 - **Routing**: TanStack Router (file-based routing)
@@ -23,7 +23,7 @@ A modern, high-performance landing page for Tawila - a commission-free restauran
 - **Testing**: Vitest
 - **Code Quality**: ESLint + Prettier
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -41,7 +41,7 @@ src/
 └── routes/              # File-based routing (TanStack Router)
 ```
 
-## 🚦 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -70,14 +70,14 @@ pnpm build
 pnpm preview
 ```
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run tests
 pnpm test
 ```
 
-## 📝 Code Quality
+## Code Quality
 
 ```bash
 # Run linting
@@ -90,7 +90,7 @@ pnpm format
 pnpm check
 ```
 
-## 🗺️ Routing
+## Routing
 
 This project uses TanStack Router with file-based routing. Routes are automatically generated from files in `src/routes/`.
 
@@ -136,7 +136,7 @@ import { Link } from '@tanstack/react-router'
 <Link to="/about">About</Link>
 ```
 
-## 🏗️ Architecture Highlights
+## Architecture Highlights
 
 ### Component-Based Structure
 
@@ -160,7 +160,7 @@ The codebase follows a clean architecture with:
 - 85% reduction in route file complexity
 - Consistent component patterns throughout
 
-## 🎨 Styling
+## Styling
 
 This project uses Tailwind CSS 4 with a custom configuration:
 - Custom color palette (purple brand colors)
@@ -168,7 +168,7 @@ This project uses Tailwind CSS 4 with a custom configuration:
 - Animation utilities
 - Consistent spacing and typography
 
-## 📦 Key Dependencies
+## Key Dependencies
 
 - `react` - UI library
 - `@tanstack/react-router` - Routing solution
@@ -177,7 +177,7 @@ This project uses Tailwind CSS 4 with a custom configuration:
 - `lucide-react` - Icon library
 - `typescript` - Type safety
 
-## 🤝 Contributing
+## Contributing
 
 This is a private project. For team members:
 
@@ -186,17 +186,17 @@ This is a private project. For team members:
 3. Run `pnpm check` before committing
 4. Submit a pull request
 
-## 📄 License
+## License
 
 Private - All rights reserved by Tawila Ltd.
 
-## 🔗 Links
+## Links
 
 - [Tawila Website](https://tawila.co.uk)
 - [Book a Demo](https://calendly.com/ahmedabdulalgane/tawila-ltd)
 - [LinkedIn](https://linkedin.com/company/tawila)
 
-## 📞 Support
+## Support
 
 For questions or support, contact:
 - Email: info@tawila.co.uk
