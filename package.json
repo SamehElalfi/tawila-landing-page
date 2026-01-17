@@ -1,5 +1,7 @@
 {
   "name": "tawila-landing-page",
+  "version": "1.0.0",
+  "description": "Modern, commission-free restaurant management platform landing page built with React, TypeScript, and TanStack Router",
   "private": true,
   "type": "module",
   "scripts": {
