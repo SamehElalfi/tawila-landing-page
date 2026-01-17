@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
-import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
 
 interface NavbarProps {
   transparent?: boolean
@@ -10,7 +10,11 @@ export function Navbar({ transparent = false }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
-  const navLinks = ['Products', 'Solutions', 'Pricing']
+  const navLinks = [
+    { label: 'Products', path: '/products' as const },
+    { label: 'Solutions', path: '/solutions' as const },
+    { label: 'Pricing', path: '/pricing' as const },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,33 +37,38 @@ export function Navbar({ transparent = false }: NavbarProps) {
           {/* Logo */}
           <div className="shrink-0">
             <Link to="/" className="flex items-center">
-              <img
-                src="https://www.tawila.co.uk/_next/image?url=%2Ftawila.png&w=3840&q=75"
-                alt="Tawila"
-                className="h-8 w-auto"
-              />
+              <img src="/tawila.png" alt="Tawila" className="h-8 w-auto" />
             </Link>
           </div>
 
-          {/* Desktop Navigation Links (Centered) */}
           <div className="hidden items-center space-x-8 md:flex">
             {navLinks.map((link) => (
               <Link
-                key={link}
-                to={`/${link.toLowerCase()}`}
+                key={link.label}
+                to={link.path}
                 className="text-gray-700 transition-colors hover:text-[#5a23b1] hover:underline"
               >
-                {link}
+                {link.label}
               </Link>
             ))}
           </div>
 
           {/* Desktop Action Buttons */}
           <div className="hidden items-center space-x-4 md:flex">
-            <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white">
+            <a
+              href="https://control.tawila.co.uk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg border-2 border-[#5a23b1] bg-purple-50 px-4 py-2 text-[#5a23b1] transition-colors hover:bg-[#5a23b1] hover:text-white"
+            >
               Log In
             </a>
-            <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]">
+            <a
+              href="https://calendly.com/ahmedabdulalgane/tawila-ltd"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg bg-[#5a23b1] px-4 py-2 text-white transition-colors hover:bg-[#4a1d91]"
+            >
               Book a Demo
             </a>
           </div>
@@ -85,19 +94,29 @@ export function Navbar({ transparent = false }: NavbarProps) {
           <div className="space-y-1 px-4 py-3">
             {navLinks.map((link) => (
               <Link
-                key={link}
-                to={`/${link.toLowerCase()}`}
+                key={link.label}
+                to={link.path}
                 className="block rounded-md px-3 py-2 text-gray-700 hover:bg-gray-50"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link}
+                {link.label}
               </Link>
             ))}
             <div className="space-y-2 pt-4">
-              <a href="https://control.tawila.co.uk/" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-center text-[#5a23b1]">
+              <a
+                href="https://control.tawila.co.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-lg border-2 border-[#5a23b1] px-4 py-2 text-center text-[#5a23b1]"
+              >
                 Log In
               </a>
-              <a href="https://calendly.com/ahmedabdulalgane/tawila-ltd" target="_blank" rel="noopener noreferrer" className="block w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-center text-white">
+              <a
+                href="https://calendly.com/ahmedabdulalgane/tawila-ltd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-center text-white"
+              >
                 Book a Demo
               </a>
             </div>

@@ -1,9 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { Instagram, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
-import { Mail, Phone, MapPin, Send, Linkedin, Instagram } from 'lucide-react'
 
 export const Route = createFileRoute('/contact')({
   component: ContactPage,
