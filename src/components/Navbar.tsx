@@ -29,7 +29,9 @@ export function Navbar({ transparent = false }: NavbarProps) {
   return (
     <nav
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        shouldBeTransparent ? 'bg-transparent' : 'bg-white shadow-sm'
+        shouldBeTransparent
+          ? 'bg-white/10 backdrop-blur-md'
+          : 'bg-white/80 shadow-sm backdrop-blur-md'
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -90,7 +92,7 @@ export function Navbar({ transparent = false }: NavbarProps) {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="border-t border-gray-200 bg-white md:hidden">
+        <div className="border-t border-white/20 bg-white/80 backdrop-blur-md md:hidden">
           <div className="space-y-1 px-4 py-3">
             {navLinks.map((link) => (
               <Link
