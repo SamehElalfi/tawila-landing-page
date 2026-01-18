@@ -33,7 +33,7 @@ export function Footer() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         {/* Main Footer Content */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo and About */}
@@ -128,13 +128,13 @@ export function Footer() {
             <p className="mb-4 text-sm">
               Get the latest updates and restaurant insights.
             </p>
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1]"
+                className="w-full rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1]"
               />
-              <button className="rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91]">
+              <button className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91]">
                 Subscribe
               </button>
             </div>
@@ -142,7 +142,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 border-t border-gray-800 pt-8">
+        <div className="mt-10 border-t border-gray-800 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
             <p>© {new Date().getFullYear()} Tawila. All rights reserved.</p>
             <div className="flex gap-6">
