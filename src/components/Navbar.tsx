@@ -28,11 +28,9 @@ export function Navbar({ transparent = false }: NavbarProps) {
 
   return (
     <nav
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        shouldBeTransparent
-          ? 'bg-white/10 backdrop-blur-md'
-          : 'bg-white/80 shadow-sm backdrop-blur-md'
-      }`}
+      className={`fixed top-0 z-50 w-full backdrop-blur-md transition-all duration-300 ${
+        shouldBeTransparent ? 'bg-white/10' : 'bg-white/80'
+      } ${isScrolled ? 'shadow-sm' : ''}`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
