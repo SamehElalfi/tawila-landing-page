@@ -157,6 +157,10 @@ export function Footer() {
         </div>
       </div>
 
+      {/* Extra whitespace section with decorative element */}
+      <div className="relative h-24 lg:h-32">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-transparent" />
+      </div>
     </footer>
   )
 }
