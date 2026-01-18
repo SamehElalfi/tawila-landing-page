@@ -3,8 +3,37 @@ import { Instagram, Linkedin } from 'lucide-react'
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-400">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+    <footer className="relative bg-gray-900 text-gray-400 overflow-hidden">
+      {/* Background Illustration - Abstract shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Large gradient circle - top right */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-purple-600/20 to-purple-900/10 rounded-full blur-3xl" />
+        {/* Medium circle - bottom left */}
+        <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-gradient-to-tr from-[#5a23b1]/15 to-purple-700/10 rounded-full blur-2xl" />
+        {/* Small accent circle */}
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-purple-500/10 rounded-full blur-xl" />
+        {/* Wave pattern overlay */}
+        <svg
+          className="absolute bottom-0 left-0 w-full h-64 opacity-5"
+          viewBox="0 0 1440 320"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="currentColor"
+            className="text-purple-400"
+            d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          />
+        </svg>
+        {/* Grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         {/* Main Footer Content */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo and About */}
@@ -113,7 +142,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 border-t border-gray-800 pt-8">
+        <div className="mt-16 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
             <p>© {new Date().getFullYear()} Tawila. All rights reserved.</p>
             <div className="flex gap-6">
@@ -126,6 +155,11 @@ export function Footer() {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Extra whitespace section with decorative element */}
+      <div className="relative h-24 lg:h-32">
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-transparent" />
       </div>
     </footer>
   )
