@@ -33,7 +33,7 @@ export function Footer() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         {/* Main Footer Content */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Column 1: Logo and About */}
@@ -142,7 +142,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 border-t border-gray-800 pt-8">
+        <div className="mt-10 border-t border-gray-800 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-sm sm:flex-row">
             <p>© {new Date().getFullYear()} Tawila. All rights reserved.</p>
             <div className="flex gap-6">
@@ -157,10 +157,6 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Extra whitespace section with decorative element */}
-      <div className="relative h-24 lg:h-32">
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-transparent" />
-      </div>
     </footer>
   )
 }
