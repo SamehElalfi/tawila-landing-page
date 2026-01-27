@@ -45,7 +45,7 @@ src/
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - pnpm (recommended) or npm
 
 ### Installation
@@ -132,8 +132,7 @@ Use the `Link` component for client-side navigation:
 
 ```tsx
 import { Link } from '@tanstack/react-router'
-
-<Link to="/about">About</Link>
+;<Link to="/about">About</Link>
 ```
 
 ## Architecture Highlights
@@ -141,6 +140,7 @@ import { Link } from '@tanstack/react-router'
 ### Component-Based Structure
 
 The codebase follows a clean architecture with:
+
 - **19 reusable components** for consistent UI patterns
 - **9 data configuration files** for easy content management
 - **6 TypeScript type files** for complete type safety
@@ -163,6 +163,7 @@ The codebase follows a clean architecture with:
 ## Styling
 
 This project uses Tailwind CSS 4 with a custom configuration:
+
 - Custom color palette (purple brand colors)
 - Responsive breakpoints
 - Animation utilities
@@ -199,5 +200,6 @@ Private - All rights reserved by Tawila Ltd.
 ## Support
 
 For questions or support, contact:
+
 - Email: info@tawila.co.uk
 - Website: [tawila.co.uk](https://tawila.co.uk)

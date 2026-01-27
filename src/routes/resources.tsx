@@ -18,11 +18,15 @@ function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="bg-linear-to-br from-gray-50 via-purple-50/30 to-gray-50 py-20 pt-32">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <motion.div {...fadeInUp} transition={{ duration: 0.6 }} className="text-center">
+          <motion.div
+            {...fadeInUp}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
             <h1 className="mb-6 text-5xl font-bold text-gray-900 lg:text-6xl">
               Resources & Learning
             </h1>
@@ -38,7 +42,11 @@ function ResourcesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {resourceCategories.map((category, index) => (
-              <ResourceCategoryCard key={category.title} category={category} index={index} />
+              <ResourceCategoryCard
+                key={category.title}
+                category={category}
+                index={index}
+              />
             ))}
           </div>
         </div>
@@ -53,7 +61,9 @@ function ResourcesPage() {
             transition={{ duration: 0.6 }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-4 text-4xl font-bold text-gray-900">Featured Articles</h2>
+            <h2 className="mb-4 text-4xl font-bold text-gray-900">
+              Featured Articles
+            </h2>
             <p className="mx-auto max-w-2xl text-lg text-gray-600">
               Latest guides and insights to help your restaurant thrive
             </p>
@@ -61,12 +71,16 @@ function ResourcesPage() {
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {resourceArticles.map((article, index) => (
-              <ResourceArticleCard key={article.title} article={article} index={index} />
+              <ResourceArticleCard
+                key={article.title}
+                article={article}
+                index={index}
+              />
             ))}
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </div>
   )
