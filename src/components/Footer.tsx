@@ -5,7 +5,10 @@ import { useState, type FormEvent } from 'react'
 export function Footer() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+  const [message, setMessage] = useState<{
+    type: 'success' | 'error'
+    text: string
+  } | null>(null)
 
   const handleNewsletterSubmit = async (e: FormEvent) => {
     e.preventDefault()
@@ -36,7 +39,7 @@ export function Footer() {
     } catch (error) {
       setMessage({
         type: 'error',
-        text: 'Failed to subscribe. Please try again later.'
+        text: 'Failed to subscribe. Please try again later.',
       })
     } finally {
       setIsSubmitting(false)
@@ -169,7 +172,10 @@ export function Footer() {
             <p className="mb-4 text-sm">
               Get the latest updates and restaurant insights.
             </p>
-            <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2">
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex flex-col gap-2"
+            >
               <input
                 type="email"
                 value={email}
@@ -186,7 +192,9 @@ export function Footer() {
                 {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </button>
               {message && (
-                <p className={`text-xs ${message.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                <p
+                  className={`text-xs ${message.type === 'success' ? 'text-green-400' : 'text-red-400'}`}
+                >
                   {message.text}
                 </p>
               )}
