@@ -1,49 +1,27 @@
 import { Link } from '@tanstack/react-router'
 import { Instagram, Linkedin } from 'lucide-react'
 import { useState, type FormEvent } from 'react'
+import { useMutation } from '@tanstack/react-query'
+import { newsletterApi } from '@/lib/api/newsletter'
 
 export function Footer() {
   const [email, setEmail] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [message, setMessage] = useState<{
-    type: 'success' | 'error'
-    text: string
-  } | null>(null)
+
+  const mutation = useMutation({
+    mutationFn: newsletterApi.subscribe,
+    onSuccess: () => {
+      setEmail('')
+    },
+  })
 
   const handleNewsletterSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     if (!email) {
-      setMessage({ type: 'error', text: 'Please enter your email address' })
       return
     }
 
-    setIsSubmitting(true)
-    setMessage(null)
-
-    try {
-      const response = await fetch('https://api.tawila.co.uk/api/newsletter', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to subscribe')
-      }
-
-      setMessage({ type: 'success', text: 'Successfully subscribed!' })
-      setEmail('')
-    } catch (error) {
-      setMessage({
-        type: 'error',
-        text: 'Failed to subscribe. Please try again later.',
-      })
-    } finally {
-      setIsSubmitting(false)
-    }
+    mutation.mutate({ email })
   }
 
   return (
@@ -181,21 +159,24 @@ export function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                disabled={isSubmitting}
+                disabled={mutation.isPending}
                 className="w-full rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1] disabled:opacity-50"
               />
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={mutation.isPending || !email}
                 className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                {mutation.isPending ? 'Subscribing...' : 'Subscribe'}
               </button>
-              {message && (
-                <p
-                  className={`text-xs ${message.type === 'success' ? 'text-green-400' : 'text-red-400'}`}
-                >
-                  {message.text}
+              {mutation.isSuccess && (
+                <p className="text-xs text-green-400">
+                  Successfully subscribed!
+                </p>
+              )}
+              {mutation.isError && (
+                <p className="text-xs text-red-400">
+                  Failed to subscribe. Please try again later.
                 </p>
               )}
             </form>
