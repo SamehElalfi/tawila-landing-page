@@ -132,7 +132,6 @@ Use the `Link` component for client-side navigation:
 
 ```tsx
 import { Link } from '@tanstack/react-router'
-
 ;<Link to="/about">About</Link>
 ```
 

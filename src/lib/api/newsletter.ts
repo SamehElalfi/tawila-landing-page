@@ -10,8 +10,13 @@ export interface NewsletterSubscribeResponse {
 }
 
 export const newsletterApi = {
-  subscribe: async (data: NewsletterSubscribeRequest): Promise<NewsletterSubscribeResponse> => {
-    const response = await apiClient.post<NewsletterSubscribeResponse>('/newsletter', data)
+  subscribe: async (
+    data: NewsletterSubscribeRequest,
+  ): Promise<NewsletterSubscribeResponse> => {
+    const response = await apiClient.post<NewsletterSubscribeResponse>(
+      '/newsletter',
+      data,
+    )
     return response.data
   },
 }

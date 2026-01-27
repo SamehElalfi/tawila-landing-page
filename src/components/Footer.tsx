@@ -1,7 +1,8 @@
 import { Link } from '@tanstack/react-router'
 import { Instagram, Linkedin } from 'lucide-react'
-import { useState, type FormEvent } from 'react'
+import {  useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
+import type {FormEvent} from 'react';
 import { newsletterApi } from '@/lib/api/newsletter'
 
 export function Footer() {
