@@ -1,7 +1,48 @@
 import { Link } from '@tanstack/react-router'
 import { Instagram, Linkedin } from 'lucide-react'
+import { useState, type FormEvent } from 'react'
 
 export function Footer() {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null)
+
+  const handleNewsletterSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+
+    if (!email) {
+      setMessage({ type: 'error', text: 'Please enter your email address' })
+      return
+    }
+
+    setIsSubmitting(true)
+    setMessage(null)
+
+    try {
+      const response = await fetch('https://api.tawila.co.uk/api/newsletter', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to subscribe')
+      }
+
+      setMessage({ type: 'success', text: 'Successfully subscribed!' })
+      setEmail('')
+    } catch (error) {
+      setMessage({
+        type: 'error',
+        text: 'Failed to subscribe. Please try again later.'
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <footer className="relative bg-gray-900 text-gray-400 overflow-hidden">
       {/* Background Illustration - Abstract shapes */}
@@ -128,16 +169,28 @@ export function Footer() {
             <p className="mb-4 text-sm">
               Get the latest updates and restaurant insights.
             </p>
-            <div className="flex flex-col gap-2">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col gap-2">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1]"
+                disabled={isSubmitting}
+                className="w-full rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1] disabled:opacity-50"
               />
-              <button className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91]">
-                Subscribe
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isSubmitting ? 'Subscribing...' : 'Subscribe'}
               </button>
-            </div>
+              {message && (
+                <p className={`text-xs ${message.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                  {message.text}
+                </p>
+              )}
+            </form>
           </div>
         </div>
 
