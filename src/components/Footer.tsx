@@ -1,7 +1,30 @@
 import { Link } from '@tanstack/react-router'
 import { Instagram, Linkedin } from 'lucide-react'
+import {  useState } from 'react'
+import { useMutation } from '@tanstack/react-query'
+import type {FormEvent} from 'react';
+import { newsletterApi } from '@/lib/api/newsletter'
 
 export function Footer() {
+  const [email, setEmail] = useState('')
+
+  const mutation = useMutation({
+    mutationFn: newsletterApi.subscribe,
+    onSuccess: () => {
+      setEmail('')
+    },
+  })
+
+  const handleNewsletterSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+
+    if (!email) {
+      return
+    }
+
+    mutation.mutate({ email })
+  }
+
   return (
     <footer className="relative bg-gray-900 text-gray-400 overflow-hidden">
       {/* Background Illustration - Abstract shapes */}
@@ -128,16 +151,36 @@ export function Footer() {
             <p className="mb-4 text-sm">
               Get the latest updates and restaurant insights.
             </p>
-            <div className="flex flex-col gap-2">
+            <form
+              onSubmit={handleNewsletterSubmit}
+              className="flex flex-col gap-2"
+            >
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1]"
+                disabled={mutation.isPending}
+                className="w-full rounded-lg bg-gray-800 px-4 py-2 text-sm text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#5a23b1] disabled:opacity-50"
               />
-              <button className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91]">
-                Subscribe
+              <button
+                type="submit"
+                disabled={mutation.isPending || !email}
+                className="w-full rounded-lg bg-[#5a23b1] px-4 py-2 text-sm font-semibold text-white hover:bg-[#4a1d91] disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {mutation.isPending ? 'Subscribing...' : 'Subscribe'}
               </button>
-            </div>
+              {mutation.isSuccess && (
+                <p className="text-xs text-green-400">
+                  Successfully subscribed!
+                </p>
+              )}
+              {mutation.isError && (
+                <p className="text-xs text-red-400">
+                  Failed to subscribe. Please try again later.
+                </p>
+              )}
+            </form>
           </div>
         </div>
 

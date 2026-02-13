@@ -34,11 +34,15 @@ export function PricingCard({ plan, index }: PricingCardProps) {
         </h3>
         <div className="mb-2">
           <span className="text-5xl font-bold">{plan.price}</span>
-          <span className={`text-lg ${plan.popular ? 'text-purple-200' : 'text-gray-500'}`}>
+          <span
+            className={`text-lg ${plan.popular ? 'text-purple-200' : 'text-gray-500'}`}
+          >
             {plan.period}
           </span>
         </div>
-        <p className={`text-sm ${plan.popular ? 'text-purple-100' : 'text-gray-600'}`}>
+        <p
+          className={`text-sm ${plan.popular ? 'text-purple-100' : 'text-gray-600'}`}
+        >
           {plan.description}
         </p>
       </div>

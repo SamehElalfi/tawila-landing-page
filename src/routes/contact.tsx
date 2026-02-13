@@ -28,7 +28,9 @@ function ContactPage() {
     console.log('Form submitted:', formData)
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -73,7 +75,8 @@ function ContactPage() {
               Get in Touch
             </h1>
             <p className="mx-auto max-w-3xl text-xl text-gray-600">
-              Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              Have questions? We'd love to hear from you. Send us a message and
+              we'll respond as soon as possible.
             </p>
           </motion.div>
         </div>
@@ -95,7 +98,9 @@ function ContactPage() {
                 <div className="mb-4 inline-flex rounded-full bg-purple-100 p-4">
                   <info.icon className="h-8 w-8 text-[#5a23b1]" />
                 </div>
-                <h3 className="mb-2 text-xl font-bold text-gray-900">{info.title}</h3>
+                <h3 className="mb-2 text-xl font-bold text-gray-900">
+                  {info.title}
+                </h3>
                 {info.link ? (
                   <a
                     href={info.link}
@@ -125,10 +130,16 @@ function ContactPage() {
               Send Us a Message
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-6 rounded-xl bg-white p-8 shadow-xl">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 rounded-xl bg-white p-8 shadow-xl"
+            >
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <label htmlFor="name" className="mb-2 block font-semibold text-gray-700">
+                  <label
+                    htmlFor="name"
+                    className="mb-2 block font-semibold text-gray-700"
+                  >
                     Your Name *
                   </label>
                   <input
@@ -144,7 +155,10 @@ function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="mb-2 block font-semibold text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="mb-2 block font-semibold text-gray-700"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -162,7 +176,10 @@ function ContactPage() {
 
               <div className="grid gap-6 md:grid-cols-2">
                 <div>
-                  <label htmlFor="phone" className="mb-2 block font-semibold text-gray-700">
+                  <label
+                    htmlFor="phone"
+                    className="mb-2 block font-semibold text-gray-700"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -177,7 +194,10 @@ function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="restaurant" className="mb-2 block font-semibold text-gray-700">
+                  <label
+                    htmlFor="restaurant"
+                    className="mb-2 block font-semibold text-gray-700"
+                  >
                     Restaurant Name
                   </label>
                   <input
@@ -193,7 +213,10 @@ function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="message" className="mb-2 block font-semibold text-gray-700">
+                <label
+                  htmlFor="message"
+                  className="mb-2 block font-semibold text-gray-700"
+                >
                   Message *
                 </label>
                 <textarea
@@ -229,9 +252,12 @@ function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="mb-6 text-2xl font-bold text-gray-900">Connect With Us</h3>
+            <h3 className="mb-6 text-2xl font-bold text-gray-900">
+              Connect With Us
+            </h3>
             <p className="mb-8 text-gray-600">
-              Follow us on social media for updates, tips, and restaurant success stories
+              Follow us on social media for updates, tips, and restaurant
+              success stories
             </p>
 
             <div className="flex items-center justify-center gap-6">
@@ -267,7 +293,9 @@ function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="mb-4 text-2xl font-bold">Looking for Something Else?</h3>
+            <h3 className="mb-4 text-2xl font-bold">
+              Looking for Something Else?
+            </h3>
             <p className="mb-8 text-purple-100">
               Check out our resources or schedule a demo to see Tawila in action
             </p>
