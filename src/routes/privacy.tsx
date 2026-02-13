@@ -151,11 +151,6 @@ function PrivacyPolicyPage() {
             <p className="text-gray-600 mb-4">
               If you have questions or concerns about this Privacy Policy or our data practices, please contact us:
             </p>
-            <div className="bg-gray-50 rounded-lg p-6 mb-6">
-              <p className="text-gray-700 mb-2"><strong>Tawila</strong></p>
-              <p className="text-gray-600">Email: privacy@tawila.co.uk</p>
-              <p className="text-gray-600">Address: [Your Business Address]</p>
-            </div>
           </motion.div>
         </div>
       </section>
